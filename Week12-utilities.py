@@ -12,3 +12,10 @@ def LoadFile(fileName):
     finalList = contents.split("\n")
     return finalList
 
+def UpdateString(stringy, insert, number):
+    strList = []
+    for i in range(len(stringy)):
+        strList.append(stringy[i])
+    strList[number] = insert
+    strList = ''.join(strList)
+    print("OUTPUT %s" %(strList))
