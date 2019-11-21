@@ -19,3 +19,9 @@ def UpdateString(stringy, insert, number):
     strList[number] = insert
     strList = ''.join(strList)
     print("OUTPUT %s" %(strList))
+
+def FindWordCount(listy, word):
+    counter = 0
+    for i in range(len(listy)):
+        counter = counter + listy[i].count(word)
+    return counter
