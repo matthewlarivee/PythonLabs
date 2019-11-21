@@ -25,3 +25,11 @@ def FindWordCount(listy, word):
     for i in range(len(listy)):
         counter = counter + listy[i].count(word)
     return counter
+
+def ScoreFinder(playerList, scoreList, player):
+    for i in range(len(playerList)):
+        playerList[i] = playerList[i].lower()
+    if(player.lower() not in playerList):
+        PrintOutput("player not found")
+    else:
+        PrintOutput("%s got a score of %d" %(player, scoreList[playerList.index(player.lower())]))
