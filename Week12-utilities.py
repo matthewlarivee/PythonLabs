@@ -43,3 +43,18 @@ def Union(list1, list2):
         if(list2[j] not in finalList):
             finalList.append(list2[j])
     return finalList
+
+def Intersection(list1, list2):
+    unionList = []
+    intersectionList = []
+    for i in range(len(list1)):
+        if(list1[i] not in unionList):
+            unionList.append(list1[i])
+        else:
+            intersectionList.append(list1[i])
+    for j in range(len(list2)):
+        if(list2[j] not in unionList):
+            unionList.append(list2[j])
+        else:
+            intersectionList.append(list2[j])
+    return intersectionList
